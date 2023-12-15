@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/globals.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand mx-auto display-4 text-white" href="#">Formula One Teams</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary btn-nav text-white" href="/teams/add">Create</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            {{#teams}}
+            <div class="col-lg-4 col-md-6 mb-4">
+                <a href="/teams/details/{{index}}" class="text-dark">
+                    <div class="card item d-flex flex-column">
+                        <img src="{{image}}" class="card-img-top team-image" alt="{{name}} image">
+                        <div class="card-header text-decoration-none">{{name}}</div>
+                        <div class="card-body team-details">
+                            <p><strong>Country:</strong> {{country}}</p>
+                            <p><strong>Team Principal:</strong> {{team_principal}}</p>
+                            <p><strong>Championships:</strong> {{championships}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {{/teams}}
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+/* General Styles */
+body {
+    padding-top: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Cards */
+.card {
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-header {
+    font-weight: bold;
+    background-color: #f1f1f1;
+}
+
+/* Team Details */
+.team-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.team-details {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #e10600;
+}
+.navbar-brand {
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+.nav-link {
+    color: white;
+}
+
+/* Buttons */
+.btn-nav {
+    color: white;
+    background-color: #000000;
+    border-color: #000000;
+}
+.btn-nav:hover {
+    border-color: #fff;
+}
+.btn-primary:hover {
+    background-color: #1f1f27;
+}
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.btn-group .btn {
+    flex: 1;
+    margin-right: 10px;
+}
+.btn-back {
+    flex: none; /* Prevent the button from stretching */
+}
+.btn-red {
+    background-color: #e10600;
+    border-color: #e10600;
+    color: white;
+}
+.btn-red:hover {
+    border-color: #1f1f27;
+}
+
+/* Feedback */
+.feedback-list {
+    list-style: none;
+    padding-left: 0;
+}
+.feedback-item {
+    margin-bottom: 20px;
+}
+.feedback-item .card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.feedback-item .card-body {
+    padding: 15px;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Others */
+.item:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #333; /* Adjust text color as needed */
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+label {
+    font-weight: bold;
+}
+.item {
+    height: 100%;
+}

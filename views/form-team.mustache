@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/globals.css">
+    <title>Edit Formula One Team</title>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2>Edit Formula One Team</h2>
+                <form action="/teams/submit/{{index}}" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" value="{{name}}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea class="form-control" id="description" name="description" rows="3"
+                            required>{{description}}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select class="form-control" id="country" name="country" value="" required>
+                            <option value="">Select a country</option>
+                            {{#country}}
+                              <option value="{{country}}" class="font-weight-bold bg-light" selected>{{country}}</option>
+                            {{/country}}
+                            <option value="United States">United States</option>
+                            <option value="China">China</option>
+                            <option value="India">India</option>
+                            <option value="Brazil">Brazil</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="Russia">Russia</option>
+                            <option value="France">France</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Italy">Italy</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Spain">Spain</option>
+                            <option value="Mexico">Mexico</option>
+                            <option value="South Korea">South Korea</option>
+                            <option value="Indonesia">Indonesia</option>
+                            <option value="Nigeria">Nigeria</option>
+                            <option value="Saudi Arabia">Saudi Arabia</option>
+                            <option value="South Africa">South Africa</option>
+                            <option value="Egypt">Egypt</option>
+                            <!-- Add more countries as needed -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="teamPrincipal">Team Principal</label>
+                        <input type="text" class="form-control" id="teamPrincipal" name="team_principal"
+                            value="{{team_principal}}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="championships">Championships</label>
+                        <input type="number" class="form-control" id="championships" name="championships"
+                            value="{{championships}}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Image URL</label>
+                        <input type="text" class="form-control" id="image" name="image" value="{{image}}" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-red">Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
