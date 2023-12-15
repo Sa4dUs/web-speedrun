@@ -20,6 +20,11 @@ body {
     height: auto;
     object-fit: cover;
 }
+
+.capped-image {
+    height: 150px !important;
+}
+
 .team-details {
     display: flex;
     flex-direction: column;
